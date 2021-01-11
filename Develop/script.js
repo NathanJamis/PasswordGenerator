@@ -66,6 +66,9 @@ function generatePassword() {
   useSymbols = confirm('Should password have special characters? Press OK for yes, Cancel for no.')
   console.log(useSymbols);
   }
+
+// combine values
+
 // display password to field
 
 // Ending of function
