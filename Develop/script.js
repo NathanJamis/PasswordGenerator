@@ -13,6 +13,12 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
+var setLength;
+var useLower;
+var useUpper;
+var useNumber;
+var useSymbol;
+
 // Random generators
 function randomLower() {
   return  
@@ -34,7 +40,8 @@ function randomSymbol() {
 
 function generatePassword() {
 // Prompt password length
-
+  setLength = prompt('Enter password length from 8 to 128 characters')
+  console.log(setLength)
 // if not 8-128, display alert
 
 // if within, begin confirms...
