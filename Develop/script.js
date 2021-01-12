@@ -1,3 +1,49 @@
+
+function generatePassword() {
+  setLength = parseInt(prompt('Enter password length from 8 to 128 characters'));
+
+  if (setLength < 8 || setLength > 128) {
+    alert("Error")
+    return "Password length must be between 8 and 128 characters";
+  }
+
+ var hasLower = confirm("Should password have lowercase letters? Press OK for yes, Cancel for no");
+ var hasUpper = confirm("Should password have uppercase letters? Press OK for yes, Cancel for no");
+ var hasNumber = confirm("Should password have numbers? Press OK for yes, Cancel for no");
+ var hasSymbol = confirm("Should password have symbols? Press OK for yes, Cancel for no");
+
+ var lower = "abcdefghijklmnopqrstuvwxyz";
+ var upper= "ABCDEFGHIJKLMOPQRSTUVWXYZ";
+ var number = "0123456789";
+ var symbol = "~!@#$%^&*()-+";
+
+ var password = " ";
+
+ var all = " ";
+ if (hasLower) {
+   all += lower
+ } if (hasUpper) {
+   all += upper;
+ } if (hasNumber) {
+   all += number;
+ } if (hasSymbol) {
+   all += symbol;
+ } else {
+   alert("Error")
+   return "Password must have at least one set of criteria";
+  }
+
+// length of password
+for (i = 0; i < setLength; i++) {
+  var randomChar = all[Math.floor(Math.random() * all.length)];
+
+  password += randomChar;
+}
+
+return password;
+
+}
+
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
@@ -12,64 +58,3 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
-
-var setLength;
-var useLower;
-var useUpper;
-var useNumber;
-var useSymbol;
-
-// Random generators
-function randomLower() {
-  return  
-}
-
-function randomUpper() {
-
-}
-
-function randomNumber() {
-  return Math.floor
-}
-
-function randomSymbol() {
-
-}
-
-// Begin password generator function
-
-function generatePassword() {
-// Prompt password length
-  setLength = prompt('Enter password length from 8 to 128 characters')
-  console.log(setLength);
-// if no criteria selected, display alert
-  if (!setLength) {
-    alert('Please enter a password length between 8 to 128 characters')
-  }
-  // if not 8-128, display alert
-  else if (setLength < 8 || setLength > 128) {
-    setLength = prompt('Length must be between 8 and 128 characters')
-    console.log(setLength);
-  }
-// if within, begin confirms...
-  else {
-// confirm lowercase
-  useLower = confirm('Should password have lowercase letters? Press OK for yes, Cancel for no.')
-  console.log(useLower);
-// confirm uppercase
-  useUpper = confirm('Should password have uppercase letters? Press OK for yes, Cancel for no.')
-  console.log(useUpper);
-// confirm numbers
-  useNumbers = confirm('Should password have numbers? Press OK for yes, Cancel for no.')
-  console.log(useNumbers);
-// confirm symbols
-  useSymbols = confirm('Should password have special characters? Press OK for yes, Cancel for no.')
-  console.log(useSymbols);
-  }
-
-// combine values
-
-// display password to field
-
-// Ending of function
-};
