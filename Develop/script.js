@@ -17,25 +17,25 @@ function generatePassword() {
  var number = "0123456789";
  var symbol = "~!@#$%^&*()-+";
 
- var password = " ";
+ var password = "";
 
- var all = " ";
+ var criteria = "";
+
  if (hasLower) {
-   all += lower
- } if (hasUpper) {
-   all += upper;
- } if (hasNumber) {
-   all += number;
- } if (hasSymbol) {
-   all += symbol;
- } else {
-   alert("Error")
-   return "Password must have at least one set of criteria";
-  }
+  criteria += lower;
+ }
+ if (hasUpper) {
+  criteria += upper;
+ }
+ if (hasNumber) {
+  criteria += number;
+ }
+ if (hasSymbol) {
+  criteria += symbol;
+ }
 
-// length of password
 for (i = 0; i < setLength; i++) {
-  var randomChar = all[Math.floor(Math.random() * all.length)];
+  var randomChar = criteria[Math.floor(Math.random() * criteria.length)];
 
   password += randomChar;
 }
