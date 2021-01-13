@@ -33,6 +33,10 @@ function generatePassword() {
  if (hasSymbol) {
   criteria += symbol;
  }
+ else {
+   alert("Error")
+   return "Password must have at least one criteria set"
+ }
 
 for (i = 0; i < setLength; i++) {
   var randomChar = criteria[Math.floor(Math.random() * criteria.length)];
