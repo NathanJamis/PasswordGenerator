@@ -25,7 +25,7 @@ Screenshot
 ![Image](https://github.com/NathanJamis/PasswordGenerator/blob/master/Assets/03-javascript-homework-demo.png)
 
 Gif
-![Gif](\Assets\demo.gif)
+![Gif](https://github.com/NathanJamis/PasswordGenerator/blob/master/Assets/demo.gif)
 
 ## Link to Application
 ---
