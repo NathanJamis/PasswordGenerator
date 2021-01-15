@@ -22,7 +22,7 @@ Also, if the user does not confirm any set of criteria, a message will display i
 ## Visual Demos of Application
 ---
 Screenshot
-![Image](\Assets\03-javascript-homework-demo.png)
+![Image](https://github.com/NathanJamis/PasswordGenerator/blob/master/Assets/03-javascript-homework-demo.png)
 
 Gif
 ![Gif](\Assets\demo.gif)
